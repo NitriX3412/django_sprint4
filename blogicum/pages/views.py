@@ -1,17 +1,4 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
-
-
-class AboutTemplateView(TemplateView):
-    template_name = 'pages/about.html'
-
-
-class RulesTemplateView(TemplateView):
-    template_name = 'pages/rules.html'
-
-
-def permission_denied(request, exception):
-    return render(request, 'pages/403.html', status=403)
 
 
 def csrf_failure(request, reason=''):
